@@ -4,10 +4,34 @@
 html, body {
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+    @apply text-#2B2B2B;
 }
 
 * {
     -webkit-overflow-scrolling: touch !important;
+}
+
+.pointer {
+    --pointer-height: 60px;
+    height: var(--pointer-height);
+    position: relative;
+    @apply flex flex-row items-center justify-center;
+}
+.pointer:before {
+    content: "";
+    position: absolute;
+    right: calc(var(--pointer-height) / -6);
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left-width: calc(var(--pointer-height) / 6);
+    border-left-color: inherit;
+    border-top: calc(var(--pointer-height) / 2) solid transparent !important;
+    border-bottom: calc(var(--pointer-height) / 2) solid transparent !important;
+}
+
+::placeholder {
+    @apply text-#888686;
 }
 
 @tailwind utilities;
