@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demo Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.2.45/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="md:bg-gray-300 md:py-6 md:h-screen" x-data="{
+}">
+<div class="mx-auto md:max-w-sm md:bg-white md:h-full 2xl:h-5/6 md:shadow-xl md:overflow-y-auto">
+
+  <ul class="bg-opacity-10 bg-black sticky top-0 hidden md:flex items-center justify-end px-2">
+    <li>
+      <i class="mdi mdi-wifi-strength-4"></i>
+    </li>
+    <li>
+      <i class="mdi mdi-network-strength-4"></i>
+    </li>
+    <li>
+      <i class="mdi mdi-battery"></i>
+    </li>
+  </ul>
+
+  <div class="px-3 py-2 bg-#FAFAFA">
+    <div class="relative">
+      <a href="#">
+        <i class="mdi mdi-chevron-left text-4xl"></i>
+      </a>
+      <div class="font-bold absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center text-lg">
+        My Questions
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 py-2">
+    <div class="rounded border border-#D5D5D5 flex items-center overflow-hidden">
+      <i class="mdi mdi-magnify text-3xl ml-2"></i>
+      <input type="text" class="w-full p-2 font-semibold focus:outline-none" placeholder="Search Question" />
+    </div>
+  </div>
+
+  <ul class="py-2 overflow-x-auto flex text-sm">
+    <li>
+      <div class="w-5"></div>
+    </li>
+    <li>
+      <button type="button" class="whitespace-nowrap p-2 py-1 border border-#4B93F5 text-#4B93F5 bg-#4B93F526 rounded font-semibold focus:outline-none">
+        All
+      </button>
+    </li>
+    <li>
+      <div class="w-3"></div>
+    </li>
+    <li>
+      <button type="button" class="whitespace-nowrap p-2 py-1 border border-#D5D5D5 rounded font-semibold focus:outline-none">
+        Validated
+      </button>
+    </li>
+    <li>
+      <div class="w-3"></div>
+    </li>
+    <li>
+      <button type="button" class="whitespace-nowrap p-2 py-1 border border-#D5D5D5 rounded font-semibold focus:outline-none">
+        Waiting for review
+      </button>
+    </li>
+    <li>
+      <div class="w-3"></div>
+    </li>
+    <li>
+      <button type="button" class="whitespace-nowrap p-2 py-1 border border-#D5D5D5 rounded font-semibold focus:outline-none">
+        Correction in progress
+      </button>
+    </li>
+    <li>
+      <div class="w-5"></div>
+    </li>
+  </ul>
+
+  <ul class="px-5 py-4">
+    <li class="mb-4">
+      <div class="rounded p-4 shadow-lg text-white bg-#FFA252 flex">
+        <div>
+          <p class="text-xs text-white">Apr 10,21</p>
+          <p class="font-bold pt-1 pb-6 text-white">
+            When did prince Philip passed away?
+          </p>
+        </div>
+        <div class="flex flex-col justify-between items-end -m-2">
+          <div></div>
+          <div class="rounded p-2 text-xs bg-#EF9345 text-#91521D font-semibold whitespace-nowrap">
+            Waiting for review
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="mb-4">
+      <div class="rounded p-4 shadow-lg bg-#2EC98D flex">
+        <div>
+          <p class="text-xs text-white">Apr 9,21</p>
+          <p class="font-bold pt-1 pb-6 text-white">
+            Who is the present King of United Kingdom?
+          </p>
+        </div>
+        <div class="flex flex-col justify-between items-end -m-2">
+          <div>
+            <div class="rounded-full bg-#FFED89 p-1 px-2 font-semibold text-sm">
+              +50
+            </div>
+          </div>
+          <div class="rounded p-2 text-xs bg-#24B77E text-#157E55 font-semibold whitespace-nowrap">
+            Validated
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="mb-4">
+      <div class="rounded p-4 shadow-lg bg-#4B93F5 flex">
+        <div>
+          <p class="text-xs text-white">Apr 8,21</p>
+          <p class="font-bold pt-1 pb-6 text-white">
+            Who was teh first human to journey into space?
+          </p>
+        </div>
+        <div class="flex flex-col justify-between items-end -m-2">
+          <div></div>
+          <div class="rounded p-2 text-xs bg-#3885ED text-#235BA7 font-semibold whitespace-nowrap">
+            Correction in progress
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+</body>
+</html>
