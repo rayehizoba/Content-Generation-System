@@ -10,6 +10,7 @@ use App\Models\Question;
 use App\Models\Type;
 use Illuminate\Database\Seeder;
 
+
 class QuestionSeeder extends Seeder
 {
     /**
@@ -42,17 +43,13 @@ class QuestionSeeder extends Seeder
                 'answers' => [ 'Elizabeth II', 'Queen Elizabeth II' ]
             ],
         ];
-        $difficulty = Difficulty::all()->first();
-        $audience = Audience::all()->first();
-        $type = Type::all()->first();
-        $category = Category::all()->first();
         foreach ($questions as $question) {
             Question::create([
                 'label' => $question['label'],
-                'difficulty_id' => $difficulty->id,
-                'audience_id' => $audience->id,
-                'type_id' => $type->id,
-                'category_id' => $category->id,
+                'difficulty_id' => Difficulty::inRandomOrder()->first()->id,
+                'audience_id' => Audience::inRandomOrder()->first()->id,
+                'type_id' => Type::inRandomOrder()->first()->id,
+                'category_id' => Category::inRandomOrder()->first()->id,
             ]);
         }
 
@@ -68,13 +65,10 @@ class QuestionSeeder extends Seeder
                     'question_id' => $question_id
                 ]);
             }
-            for ($i = 0; $i <= 2; $i++) {
-                Answer::create([
-                    'label' => 'This is a dummy answer',
-                    'is_correct' => false,
-                    'question_id' => $question_id
-                ]);
-            }
+            Answer::factory()->count(3)->create([
+                'is_correct' => false,
+                'question_id' => $question_id
+            ]);
         }
     }
 }
