@@ -38,4 +38,9 @@ class Review extends Model
     {
         return $this->belongsTo(Type::class);
     }
+
+    public function problems()
+    {
+        return $this->belongsToMany(Problem::class);
+    }
 }

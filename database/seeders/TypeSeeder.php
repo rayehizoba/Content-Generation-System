@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Type;
 use Illuminate\Database\Seeder;
 
 class TypeSeeder extends Seeder
@@ -13,6 +14,15 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $types = [
+            'Unique Answer Question',
+            'Multiple Choice Question',
+        ];
+
+        foreach ($types as $type) {
+            Type::create([
+                'label' => $type
+            ]);
+        }
     }
 }

@@ -11,6 +11,21 @@ class Category extends Model
 
     public function children()
     {
-        return $this->hasMany(Category::class);
+        return $this->hasMany(Category::class, 'parent_id');
+    }
+
+    public function childrenRecursive()
+    {
+        return $this->children()->with('childrenRecursive');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(Client::class, 'parent_id');
+    }
+
+    public function parentRecursive()
+    {
+        return $this->parent()->with('parentRecursive');
     }
 }
