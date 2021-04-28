@@ -29,6 +29,10 @@ module.exports = {
         '#3885ED': '#3885ED',
         '#235BA7': '#235BA7',
         '#FFED89': '#FFED89',
+        '#D94BB3': '#D94BB3',
+        '#5558FF': '#5558FF',
+        '#EDEDED': '#EDEDED',
+        '#174D96': '#174D96'
       },
       fontFamily: {
         sans: ['Nunito']
