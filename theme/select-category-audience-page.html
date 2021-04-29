@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demo Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.8.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="md:bg-gray-300 md:py-6 md:h-screen" x-data="{
+  showCategories: false,
+  showSubcategories: false,
+  categories: [
+    'Biology',
+    'History & Civilizations',
+    'Geography',
+    'Sciences',
+    'Literature',
+    'Entertainment'
+  ],
+  subcategories: [
+    'Middle Age',
+    'Modern Age',
+    'Contemporary',
+    'Reanaissance',
+  ]
+}">
+<main class="mx-auto md:max-w-sm md:bg-white md:h-full 2xl:h-5/6 md:shadow-xl md:overflow-y-auto relative">
+
+  <header>
+    <ul class="bg-opacity-10 bg-black sticky top-0 hidden md:flex items-center justify-end px-2 z-20">
+      <li>
+        <i class="mdi mdi-wifi-strength-4"></i>
+      </li>
+      <li>
+        <i class="mdi mdi-network-strength-4"></i>
+      </li>
+      <li>
+        <i class="mdi mdi-battery"></i>
+      </li>
+    </ul>
+  </header>
+
+  <nav class="p-3 px-5">
+    <a href="#">
+      <i class="mdi mdi-chevron-left text-4xl"></i>
+    </a>
+  </nav>
+
+  <div class="flex flex-col items-center text-center px-5">
+    <i class="mdi mdi-lead-pencil text-8xl text-#5558FF mt-5 mb-8"></i>
+    <h2 class="font-bold text-3xl">
+      Select Category and Audience
+    </h2>
+  </div>
+
+  <div class="px-5">
+    <ul class="my-8">
+      <li class="mt-8">
+        <div @click="showCategories =true" class="cursor-pointer rounded-md border border-#D5D5D5 p-2 select-none">
+          <div class="flex items-center justify-between">
+            <div class="pl-2">
+              <p class="text-xs text-#4B93F5">
+                Category
+              </p>
+              <p class="font-semibold">
+                Modern Age
+              </p>
+            </div>
+            <div class="flex items-center">
+              <div class="rounded-full p-1 px-2 text-#4B93F5 bg-#4B93F5 bg-opacity-20 mr-1">
+                +50
+              </div>
+              <i class="mdi mdi-chevron-down text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="mt-8">
+        <div class="cursor-pointer rounded-md border border-#D5D5D5 p-2 select-none">
+          <div class="flex items-center justify-between">
+            <div class="pl-2">
+              <p class="text-xs text-#4B93F5">
+                Audience
+              </p>
+              <p class="font-semibold">
+                UK
+              </p>
+            </div>
+            <div class="flex items-center">
+              <i class="mdi mdi-chevron-down text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="mt-8">
+        <div class="cursor-pointer rounded-md border border-#D5D5D5 p-2 select-none">
+          <div class="flex items-center justify-between">
+            <div class="pl-2">
+              <p class="text-xs text-#4B93F5">
+                Difficulty
+              </p>
+              <p class="font-semibold">
+                Very Easy
+              </p>
+            </div>
+            <div class="flex items-center">
+              <i class="mdi mdi-chevron-down text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="mt-8">
+        <div class="cursor-pointer rounded-md border border-#D5D5D5 p-2 select-none">
+          <div class="flex items-center justify-between">
+            <div class="pl-2">
+              <p class="text-xs text-#4B93F5">
+                Question Type
+              </p>
+              <p class="font-semibold">
+                Unique Answer Question
+              </p>
+            </div>
+            <div class="flex items-center">
+              <i class="mdi mdi-chevron-down text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="my-8 w-full rounded p-3 font-bold text-center bg-#4B93F5 text-white">
+      Next
+    </button>
+  </div>
+
+  <div x-show="showCategories || showSubcategories"
+       class="absolute w-full h-full top-0 left-0 overflow-y-auto z-50 bg-black bg-opacity-30 select-none"
+       x-transition:enter="transition ease-out duration-300 transform-gpu"  x-transition:leave="transition ease-out delay-300 duration-500 transform-gpu"
+       x-transition:enter-start="opacity-0"                                 x-transition:leave-start="opacity-100"
+       x-transition:enter-end="opacity-100"                                 x-transition:leave-end="opacity-0">
+    <div @click.away="showCategories =false" x-show="showCategories"
+         class="absolute bottom-0 z-50 w-full origin-bottom bg-white rounded-t-2xl"
+         x-transition:enter="transition ease-out duration-500 transform-gpu"  x-transition:leave="transition ease-in duration-300 transform-gpu"
+         x-transition:enter-start="translate-y-full"                          x-transition:leave-start="translate-y-0"
+         x-transition:enter-end="translate-y-0"                               x-transition:leave-end="translate-y-full">
+      <div x-show="showCategories" class="p-5"
+           x-transition:enter="transition duration-100 transform-gpu" x-transition:leave="transition duration-200 transform-gpu"
+           x-transition:enter-start="opacity-0"                       x-transition:leave-start="opacity-100"
+           x-transition:enter-end="opacity-100"                       x-transition:leave-end="opacity-0">
+        <h2 class="font-bold text-3xl">
+          Select Category
+        </h2>
+        <ul class="font-semibold">
+          <template x-for="(item, index) in categories" :key="item">
+            <li @click="index === 1 && (showCategories =false); index === 1 && (showSubcategories =true);"
+                :class="index > 0 && 'border-t'"
+                class="cursor-pointer h-16 flex items-center justify-between px-3">
+              <span x-text="item"></span>
+              <i x-show="index > 0" class="mdi mdi-chevron-right text-4xl"></i>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+    <div @click.away="showSubcategories =false" x-show="showSubcategories"
+         class="absolute bottom-0 z-40 w-full origin-bottom bg-white rounded-t-2xl"
+         x-transition:enter="transition ease-out duration-100 transform-gpu"  x-transition:leave="transition ease-in duration-300 transform-gpu"
+         x-transition:enter-start="translate-y-full"                          x-transition:leave-start="translate-y-0"
+         x-transition:enter-end="translate-y-0"                               x-transition:leave-end="translate-y-full">
+      <div x-show="showSubcategories" class="p-5"
+           x-transition:enter="transition ease-out delay-150 duration-500 transform-gpu"  x-transition:leave="transition duration-300 transform-gpu"
+           x-transition:enter-start="opacity-0"                                           x-transition:leave-start="opacity-100"
+           x-transition:enter-end="opacity-100"                                           x-transition:leave-end="opacity-0">
+        <div class="flex items-center">
+          <i @click="showSubcategories =false; showCategories =true;" class="mdi mdi-chevron-left text-4xl mr-2"></i>
+          <h2 class="font-bold text-2xl" x-text="categories[1]"></h2>
+        </div>
+        </h2>
+        <ul class="font-semibold">
+          <template x-for="(item, index) in subcategories" :key="item">
+            <li :class="index > 0 && 'border-t'" class="cursor-pointer h-16 flex items-center justify-between px-3">
+              <span x-text="item"></span>
+              <div x-show="index == 1" class="rounded-full p-1 px-2 text-#4B93F5 bg-#4B93F5 bg-opacity-20 mr-1">
+                +50
+              </div>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
