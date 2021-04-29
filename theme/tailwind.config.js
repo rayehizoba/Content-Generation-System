@@ -5,6 +5,11 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    minHeight: {
+      'screen-1/4': '25vh',
+      'screen-1/2': '50vh',
+      'screen-3/4': '75vh',
+    },
     extend: {
       colors: {
         '#2B2B2B': '#2B2B2B',
@@ -32,7 +37,10 @@ module.exports = {
         '#D94BB3': '#D94BB3',
         '#5558FF': '#5558FF',
         '#EDEDED': '#EDEDED',
-        '#174D96': '#174D96'
+        '#174D96': '#174D96',
+        '#FF8383': '#FF8383',
+        '#2EB7C9': '#2EB7C9',
+        '#3099FF': '#3099FF',
       },
       fontFamily: {
         sans: ['Nunito']
