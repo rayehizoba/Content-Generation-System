@@ -6,6 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     minHeight: {
+      '40': '10rem',
       'screen-1/4': '25vh',
       'screen-1/2': '50vh',
       'screen-3/4': '75vh',
@@ -41,11 +42,17 @@ module.exports = {
         '#FF8383': '#FF8383',
         '#2EB7C9': '#2EB7C9',
         '#3099FF': '#3099FF',
+        '#F2F7FF': '#F2F7FF'
       },
       fontFamily: {
         sans: ['Nunito']
       }
     },
+    gradientColorStops: theme => ({
+      ...theme('colors'),
+      '#C3FFE8': '#C3FFE8',
+      '#F5FFF8': '#F5FFF8',
+    })
   },
   variants: {
     extend: {},

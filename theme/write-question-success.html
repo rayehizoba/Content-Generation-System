@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demo Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.2.45/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="md:bg-gray-300 md:py-6 md:h-screen">
+<main class="mx-auto md:max-w-sm md:bg-white md:h-full 2xl:h-5/6 md:shadow-xl md:overflow-y-auto">
+
+  <header>
+    <ul class="bg-opacity-10 bg-black sticky top-0 hidden md:flex items-center justify-end px-2 z-20">
+      <li>
+        <i class="mdi mdi-wifi-strength-4"></i>
+      </li>
+      <li>
+        <i class="mdi mdi-network-strength-4"></i>
+      </li>
+      <li>
+        <i class="mdi mdi-battery"></i>
+      </li>
+    </ul>
+  </header>
+
+  <div class="px-5 py-10 flex flex-col items-center">
+    <div class="h-40 w-40 rounded-full bg-gradient-to-b from-#C3FFE8 to-#F5FFF8 flex items-center justify-center">
+      <i class="mdi mdi-check text-#2EC98D text-9xl"></i>
+    </div>
+    <div class="h-5"></div>
+    <p class="font-bold text-3xl">
+      Congratulations!
+    </p>
+    <p class="text-#888686 text-lg">
+      Your question has been submitted!
+    </p>
+    <div class="h-5"></div>
+    <div class="rounded-full p-2 px-5 bg-#FFED89 font-bold">
+      You win 25 Points!
+    </div>
+    <div class="h-5"></div>
+    <div class="rounded-full p-1 py-2 flex items-center bg-#4B93F5 bg-opacity-10 border-#707070">
+      <i class="mdi mdi-information text-4xl text-#4B93F5"></i>
+      <p class="text-sm mx-1 leading-tight">
+        Bonus points depending on question validation extra bonus if your question is validated
+      </p>
+    </div>
+    <ul class="my-10 w-full">
+      <li>
+        <div class="bg-#F2F7FF p-3 flex items-center justify-between">
+          <p class="font-semibold">
+            Biology Theme
+          </p>
+          <div class="rounded-full p-1 px-2 text-#4B93F5 bg-#4B93F5 bg-opacity-20 mr-1 text-sm">
+            +50 pts
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="p-3 flex items-center justify-between">
+          <p class="font-semibold">
+            High Quality Question
+          </p>
+          <div class="rounded-full p-1 px-2 text-#4B93F5 bg-#4B93F5 bg-opacity-20 mr-1 text-sm">
+            +50 pts
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="bg-#F2F7FF p-3 flex items-center justify-between">
+          <p class="font-semibold">
+            Very Easy Question
+          </p>
+          <div class="rounded-full p-1 px-2 text-#4B93F5 bg-#4B93F5 bg-opacity-20 mr-1 text-sm">
+            +50 pts
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="p-3 flex items-center justify-between">
+          <p class="font-semibold">
+            Unique Answer Question
+          </p>
+          <div class="rounded-full p-1 px-2 text-#4B93F5 bg-#4B93F5 bg-opacity-20 mr-1 text-sm">
+            +50 pts
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="mb-4 w-full rounded-md p-3 font-bold text-center border border-#4B93F5 text-#4B93F5">
+      Ask Another Question
+    </button>
+    <button type="button" class="w-full rounded-md p-3 font-bold text-center bg-#4B93F5 text-white">
+      Back Home
+    </button>
+  </div>
+
+</main>
+</body>
