@@ -112,7 +112,7 @@
       </p>
       <ul>
         <li class="mt-5">
-          <div class="rounded-md border p-3 pl-0 flex items-center transition-gpu"
+          <div class="rounded-md border p-3 pl-0 flex items-center transition-gpu h-12"
                @mouseenter="correctAnswerFocus =true" @mouseleave="correctAnswerFocus =false"
                :class="{ 'border-#D5D5D5': !correctAnswerFocus, 'border-#4B93F5': correctAnswerFocus, 'border-#2EC98D': !correctAnswerFocus && correctAnswer.length }">
             <div class="h-6 w-8 rounded-tr rounded-br flex items-center justify-center transition-gpu"
@@ -124,7 +124,7 @@
           </div>
         </li>
         <li x-show="showSynonymAnswer" class="mt-5">
-          <div class="rounded-md border p-3 pl-0 flex items-center transition-gpu"
+          <div class="rounded-md border p-3 pl-0 flex items-center transition-gpu h-12"
                @mouseenter="synonymAnswerFocus =true" @mouseleave="synonymAnswerFocus =false"
                :class="{ 'border-#D5D5D5': !synonymAnswerFocus, 'border-#4B93F5': synonymAnswerFocus, 'border-#2EB7C9': !synonymAnswerFocus && synonymAnswer.length }">
             <div class="h-6 w-8 rounded-tr rounded-br flex items-center justify-center transition-gpu"
@@ -137,7 +137,7 @@
           </div>
         </li>
         <li x-show="!showSynonymAnswer" class="mt-5">
-          <button @click="showSynonymAnswer =true" type="button" class="rounded-md border border-dashed border-#4B93F5 p-3 pl-0 flex items-center focus:outline-none w-full">
+          <button @click="showSynonymAnswer =true" type="button" class="rounded-md border border-dashed border-#4B93F5 p-3 pl-0 flex items-center focus:outline-none w-full h-12">
             <div class="-ml-px mr-px h-6 w-8 text-white bg-#4B93F5 rounded-tr rounded-br flex items-center justify-center">
               <i class="mdi mdi-plus text-2xl"></i>
             </div>
