@@ -20,6 +20,7 @@ class CreateQuestionsTable extends Migration
             $table->foreignId('audience_id')->constrained();
             $table->foreignId('type_id')->constrained();
             $table->foreignId('category_id')->constrained();
+            $table->foreignId('status_id')->constrained();
             $table->timestamps();
         });
     }

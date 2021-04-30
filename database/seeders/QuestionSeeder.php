@@ -7,6 +7,7 @@ use App\Models\Audience;
 use App\Models\Category;
 use App\Models\Difficulty;
 use App\Models\Question;
+use App\Models\Status;
 use App\Models\Type;
 use Illuminate\Database\Seeder;
 
@@ -50,6 +51,7 @@ class QuestionSeeder extends Seeder
                 'audience_id' => Audience::inRandomOrder()->first()->id,
                 'type_id' => Type::inRandomOrder()->first()->id,
                 'category_id' => Category::inRandomOrder()->first()->id,
+                'status_id' => Status::inRandomOrder()->first()->id,
             ]);
         }
 

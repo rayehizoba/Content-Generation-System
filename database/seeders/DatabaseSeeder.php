@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             DifficultySeeder::class,
             ProblemSeeder::class,
             TypeSeeder::class,
+            StatusSeeder::class,
             QuestionSeeder::class,
         ]);
     }
