@@ -21,7 +21,7 @@ class QuestionsPage extends Component
     public function render()
     {
         $query = Question::query();
-        $query->where('label', 'like', '%'.$this->search.'%');
+        $query->whereRaw("UPPER('label') LIKE '%'". strtoupper($this->search)."'%'");
         $query->when($this->status, function ($q) {
             return $q->where('status_id', $this->status);
         });
