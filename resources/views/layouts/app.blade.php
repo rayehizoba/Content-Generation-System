@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.2.45/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="{{ URL::asset('css/tailwind.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         @livewireStyles
     </head>
