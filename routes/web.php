@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\QuestionsPage;
+use App\Http\Livewire\CreateQuestionPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/questions', QuestionsPage::class);
+Route::get('/create-question', CreateQuestionPage::class);
